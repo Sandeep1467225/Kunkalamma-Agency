@@ -1,11 +1,11 @@
-import { Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TELUGU } from './translations';
 import { FEED_CATALOGUE } from './feed-catalogue';
 
 @Component({ selector: 'app-root', imports: [CommonModule, FormsModule], templateUrl: './app.component.html', styleUrl: './app.component.sass' })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent {
   @HostListener('contextmenu', ['$event'])
   @HostListener('dragstart', ['$event'])
   protectImages(event: Event) {
@@ -49,28 +49,6 @@ export class AppComponent implements OnInit, OnDestroy {
   legalDialog: 'privacy' | 'terms' | null = null;
   @ViewChild('legalModal') legalModal!: ElementRef<HTMLDialogElement>;
   openLegal(section: 'privacy' | 'terms') { this.legalDialog = section; this.legalModal.nativeElement.showModal(); }
-  private welcomePlayed = false;
-  private welcomeAudio?: HTMLAudioElement;
-  private readonly welcomeOnInteraction = () => this.playWelcome();
-  ngOnInit() {
-    this.welcomeAudio = document.getElementById('welcome-audio') as HTMLAudioElement | undefined;
-    if (!this.welcomeAudio) return;
-    this.welcomeAudio.playbackRate = 1.2;
-    this.welcomePlayed = !this.welcomeAudio.paused || this.welcomeAudio.currentTime > 0;
-    this.playWelcome();
-    document.addEventListener('pointerdown', this.welcomeOnInteraction, { once: true });
-    document.addEventListener('keydown', this.welcomeOnInteraction, { once: true });
-  }
-  ngOnDestroy() {
-    document.removeEventListener('pointerdown', this.welcomeOnInteraction);
-    document.removeEventListener('keydown', this.welcomeOnInteraction);
-    this.welcomeAudio?.pause();
-  }
-  playWelcome(replay = false) {
-    if ((!replay && this.welcomePlayed) || !this.welcomeAudio) return;
-    if (replay) this.welcomeAudio.currentTime = 0;
-    this.welcomeAudio.play().then(() => { this.welcomePlayed = true; }).catch(() => { /* Playback can require a user gesture. */ });
-  }
   readonly catalogue = FEED_CATALOGUE;
   selectedProductId = this.catalogue.products[0].id;
   feedFilter: string | null = null;
@@ -103,6 +81,6 @@ export class AppComponent implements OnInit, OnDestroy {
     this.selectedProductId = id; this.feed = product.feedType;
     this.go('product');
   }
-  whatsapp(message = this.language === 'te' ? 'నమస్కారం, ఆక్వా మేత గురించి తెలుసుకోవాలనుకుంటున్నాను.' : 'Hello, I would like to enquire about aqua feed.') { return 'whatsapp://send?phone=917382932462&text=' + encodeURIComponent(message); }
+  whatsapp(message = this.language === 'te' ? 'నమస్కారం, ఆక్వా మేత గురించి తెలుసుకోవాలనుకుంటున్నాను.' : 'Hello, I would like to enquire about aqua feed.') { return 'whatsapp://send?phone=919652270461&text=' + encodeURIComponent(message); }
   send() { if(this.name.trim() && this.message.trim()) { window.location.href = this.whatsapp(this.language === 'te' ? `నమస్కారం, నా పేరు ${this.name}. ${this.message}` : `Hello, I am ${this.name}. ${this.message}`); this.sent = true; } }
 }
