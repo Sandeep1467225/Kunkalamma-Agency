@@ -1,5 +1,31 @@
 # Agency
 
+## Security and deployment
+
+Run `npm run build` and publish only `dist/agency/browser`, never the project
+directory or the development server. Production JavaScript is optimized and source
+maps are explicitly disabled. Code sent to a browser can still be inspected;
+never put passwords, API secrets, or private business logic in this frontend.
+Private data requires a backend with authentication and authorization.
+
+The HTML includes a Content Security Policy restricting scripts to this origin,
+blocking plugins and native form submissions, and allowing the Google Fonts used
+by the design. Angular runtime styles require inline style permission. Contact
+enquiries still open WhatsApp through the existing JavaScript handler.
+
+`public/_headers` supplies additional headers for hosts that support this format
+(for example, Netlify and Cloudflare Pages static hosting). On other hosts,
+configure those response headers on the server/CDN. In particular,
+`frame-ancestors` and `X-Frame-Options` prevent embedding only when sent as HTTP
+response headers. Serve production over HTTPS. After deployment, inspect the
+actual response headers to confirm they are applied; the Angular development
+server does not apply `_headers`.
+
+Websites cannot reliably block DevTools, browser/OS screenshots, screen recording,
+or photographs. The display-capture policy only disables this document's use of
+the Screen Capture API; it does not prevent visitors capturing the page. Right-click,
+keyboard, and text-selection restrictions are not security boundaries.
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.14.
 
 ## Development server

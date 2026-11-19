@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" preserveAspectRatio="none">
+<defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#53bad9" stop-opacity=".55"/><stop offset="1" stop-color="#c5edf9" stop-opacity=".5"/></linearGradient></defs>
+<path d="M0 70C180 5 300 5 480 70S780 135 960 70S1260 5 1440 70V200H0Z" fill="url(#sea)" stroke="#6dc6df" stroke-opacity=".6" stroke-width="1.2">
+<animate attributeName="d" dur="4.8s" repeatCount="indefinite" values="M0 70C180 5 300 5 480 70S780 135 960 70S1260 5 1440 70V200H0Z;M0 70C180 135 300 135 480 70S780 5 960 70S1260 135 1440 70V200H0Z;M0 70C180 5 300 5 480 70S780 135 960 70S1260 5 1440 70V200H0Z" calcMode="spline" keyTimes="0;.5;1" keySplines=".42 0 .58 1;.42 0 .58 1"/>
+</path>
+<path d="M0 110C200 160 320 160 520 110S840 60 1040 110S1280 160 1440 110V200H0Z" fill="#c9edf8" fill-opacity=".65">
+<animate attributeName="d" dur="6.2s" repeatCount="indefinite" values="M0 110C200 160 320 160 520 110S840 60 1040 110S1280 160 1440 110V200H0Z;M0 110C200 60 320 60 520 110S840 160 1040 110S1280 60 1440 110V200H0Z;M0 110C200 160 320 160 520 110S840 60 1040 110S1280 160 1440 110V200H0Z" calcMode="spline" keyTimes="0;.5;1" keySplines=".42 0 .58 1;.42 0 .58 1"/>
+</path>
+<path d="M0 145C200 110 360 110 560 145S920 180 1120 145S1320 110 1440 145V200H0Z" fill="#e4f7fc" fill-opacity=".6">
+<animate attributeName="d" dur="5.6s" repeatCount="indefinite" values="M0 145C200 110 360 110 560 145S920 180 1120 145S1320 110 1440 145V200H0Z;M0 145C200 180 360 180 560 145S920 110 1120 145S1320 180 1440 145V200H0Z;M0 145C200 110 360 110 560 145S920 180 1120 145S1320 110 1440 145V200H0Z" calcMode="spline" keyTimes="0;.5;1" keySplines=".42 0 .58 1;.42 0 .58 1"/>
+</path></svg>

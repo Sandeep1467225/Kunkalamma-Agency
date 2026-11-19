@@ -1,0 +1,617 @@
+// Static homepage foundations.
+.hero
+  position: relative
+  overflow: hidden
+.hero-photo
+  position: absolute
+  right: 0
+  top: 0
+  bottom: 0
+  &::after
+    content: ''
+    position: absolute
+    inset: 0
+.hero-content
+  position: relative
+.stats
+  display: flex
+  background: #ffffffed
+  border: 1px solid white
+  > div
+    display: flex
+    flex: 1
+    align-items: center
+    border-right: 1px solid #dde5ee
+    &:last-child
+      border-right: 0
+  strong, small
+    display: block
+  small
+    margin-top: 5px
+.round
+  display: grid
+  place-items: center
+  flex-shrink: 0
+  border-radius: 50%
+  color: white
+  background: #083e7d
+  &.green
+    background: #16753e
+.section-title
+  position: relative
+  text-align: center
+  &::after
+    display: block
+    position: absolute
+    left: 0
+    right: 0
+    font-weight: 400
+.solutions
+  display: grid
+  grid-template-columns: 1fr 1fr
+.solution
+  display: flex
+  justify-content: space-between
+  border: 1px solid #dce7f0
+  overflow: hidden
+.feed-grid
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+.feed-card
+  display: flex
+  border: 1px solid #e1ebf3
+  border-radius: 7px
+.feed-image
+  border-radius: 50%
+// Static reference layout. No animated image overlays.
+.icon
+  display: inline-block
+  width: 20px
+  height: 20px
+  flex-shrink: 0
+  vertical-align: middle
+.artwork
+  background-repeat: no-repeat
+.logo.artwork, .animal.artwork, .catalog-image.artwork, .bag.artwork
+  background-size: contain !important
+.nav
+  min-height: 86px
+.topbar .icon
+  width: 12px
+  height: 12px
+.top-inner
+  justify-content: flex-end
+  gap: 55px
+.language-label
+  white-space: nowrap
+.identity strong
+  font-size: 18px
+.hero
+  min-height: 425px
+  padding-bottom: 40px
+  background: #f0f8fc
+  isolation: isolate
+.hero-photo
+  width: 78%
+  background-position: right 48% !important
+  &::after
+    background: linear-gradient(90deg, #f6fbfe 0%, #f6fbfef5 14%, #f6fbfe9c 33%, #f6fbfe00 63%)
+.hero-content
+  padding-top: 43px
+  padding-bottom: 20px
+  z-index: 2
+.hero-copy
+  max-width: 630px
+  > p:last-child
+    max-width: 365px
+    font-size: 14px
+    line-height: 1.85
+    margin-bottom: 22px
+.eyebrow
+  font-size: 15px
+  font-weight: 700
+  color: #0b2947
+.hero h1
+  font-size: clamp(30px, 3.35vw, 42px)
+  letter-spacing: -1.2px
+  color: #082c4d
+  margin: 9px 0 9px
+.hero .hero-subtitle
+  font-size: 19px
+  color: #10243b
+  font-weight: 700
+  margin: 0 0 21px
+.stats
+  width: 680px
+  max-width: 100%
+  margin-top: 26px
+  border-radius: 7px
+  padding: 16px 3px
+  box-shadow: 0 5px 20px #123e6010
+  > div
+    padding: 0 16px
+    gap: 12px
+  strong
+    color: #122838
+    font-size: 16px
+  small
+    font-size: 12px
+.round
+  width: 43px
+  height: 43px
+  .icon
+    width: 25px
+    height: 25px
+.wave-edge
+  position: absolute
+  bottom: -1px
+  left: 0
+  width: 100%
+  height: 65px
+  z-index: 1
+  pointer-events: none
+  svg
+    display: block
+    width: 100%
+    height: 100%
+.supply-section
+  padding-top: 3px
+.section-title
+  font-size: 21px
+  margin-bottom: 28px
+  &::after
+    content: ''
+    top: 23px
+    font-size: 25px
+.solutions
+  gap: 17px
+.solution
+  min-height: 180px
+  position: relative
+  background: #f3f8fc
+  border-radius: 8px
+  padding: 25px 28px
+  align-items: center
+  .solution-copy
+    position: relative
+    z-index: 2
+  .animal
+    position: relative
+    width: 45%
+    height: 143px
+    aspect-ratio: auto
+    z-index: 1
+    mix-blend-mode: multiply
+  h3
+    font-size: 21px
+    color: #142d42
+  p
+    font-size: 13px
+    line-height: 1.9
+    margin-bottom: 14px
+  &::after
+    content: ''
+    position: absolute
+    right: 0
+    bottom: 0
+    width: 65%
+    height: 65px
+    background: url('/assets/water.svg') center / cover no-repeat
+    opacity: .55
+    pointer-events: none
+  &.prawn
+    background: #f6f8f3
+    h3
+      color: #203a32
+.button
+  gap: 9px
+  font-size: 12px
+  padding: 10px 14px
+  border-radius: 4px
+  .icon
+    width: 16px
+    height: 16px
+.feed-section
+  margin-top: 21px
+.feed-grid
+  gap: 15px
+.feed-card
+  flex-direction: row
+  align-items: center
+  text-align: left
+  gap: 17px
+  padding: 18px 15px
+  background: #f5faff
+  min-height: 150px
+  h3
+    font-size: 16px
+    margin: 0 0 1px
+  p
+    font-size: 12px
+    line-height: 1.8
+    margin: 5px 0 8px
+  .button
+    font-size: 11px
+    padding: 7px 12px
+.feed-image
+  width: 112px
+  height: 112px
+  flex-shrink: 0
+.heading-accent
+  display: block
+  font-size: 24px
+  line-height: .8
+  color: #0a4178
+  font-weight: 400
+.trust-section
+  margin-top: 15px
+  margin-bottom: 32px
+.why
+  display: flex
+  align-items: center
+  gap: 35px
+  padding: 25px 30px
+  background: #eaf3fc
+  border: 1px solid #e0ebf3
+  border-radius: 8px
+.why-title
+  display: flex
+  align-items: center
+  gap: 20px
+  flex-shrink: 0
+  h3
+    font-size: 18px
+    line-height: 1.6
+    margin-bottom: 0
+    .heading-accent
+      margin-top: 8px
+.award
+  display: flex
+  .icon
+    width: 64px
+    height: 74px
+.reasons
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 11px 20px
+  flex: 1
+  p
+    display: flex
+    align-items: center
+    gap: 9px
+    margin: 0
+    font-size: 11px
+    color: #1a2b3d
+    line-height: 1.6
+.check-mark
+  display: inline-grid
+  place-items: center
+  width: 16px
+  height: 16px
+  flex-shrink: 0
+  color: white
+  background: #083e7d
+  font-size: 10px
+  border-radius: 50%
+.home-help
+  display: flex
+  align-items: center
+  gap: 18px
+  padding: 16px 32px
+  margin-top: 12px
+  margin-bottom: 0
+  border-radius: 8px
+  background: #e6f3fc
+  h3
+    color: #142635
+    font-size: 16px
+    margin-bottom: 3px
+  p
+    margin-bottom: 0
+    font-size: 12px
+    line-height: 1.7
+  > .button
+    margin-left: auto
+    white-space: nowrap
+.whatsapp-icon
+  flex-shrink: 0
+  width: 52px
+  height: 52px
+  .icon
+    width: 36px
+    height: 36px
+footer
+  padding-top: 32px
+  background: linear-gradient(110deg, #073e68, #053455)
+  position: relative
+  overflow: hidden
+  &::after
+    content: ''
+    position: absolute
+    bottom: -45px
+    right: -35px
+    width: 300px
+    height: 110px
+    opacity: .55
+    background: url('/assets/water.svg') center / cover no-repeat
+    pointer-events: none
+.footer-grid
+  gap: 35px
+  grid-template-columns: 1.3fr .9fr 1fr 1.1fr
+  p, button
+    font-size: 12px
+    line-height: 1.9
+  > div
+    position: relative
+    z-index: 1
+.footer-fish img
+  filter: grayscale(1) brightness(3)
+.copyright
+  background: white
+  padding: 17px
+.image-caption
+  display: block
+  color: #6d8092
+  font-size: 11px
+  text-align: center
+  margin-bottom: 15px
+@media (max-width: 1100px)
+  .nav
+    flex-wrap: nowrap
+    gap: 15px
+  .identity strong
+    font-size: 15px
+  .identity small
+    font-size: 8px
+  .logo
+    width: 46px
+    height: 46px
+  nav
+    width: auto
+    margin-top: 0
+    gap: 15px
+    button
+      font-size: 11px
+    .button
+      font-size: 10px
+      padding: 10px
+  .feed-image
+    width: 85px
+    height: 85px
+  .feed-card
+    gap: 10px
+    padding: 16px 12px
+    h3
+      font-size: 14px
+  .why
+    gap: 20px
+    padding: 22px
+  .why-title
+    gap: 12px
+    h3
+      font-size: 16px
+  .reasons
+    gap: 9px 15px
+    p
+      font-size: 10px
+@media (max-width: 760px)
+  .trust-section
+    margin-bottom: 24px
+  .nav
+    flex-wrap: wrap
+  .menu
+    display: block
+    background: none
+    color: #083e7d
+    padding: 5px
+    .icon
+      width: 26px
+      height: 26px
+  nav
+    display: none
+    width: 100%
+    &.open
+      display: flex
+      flex-direction: column
+      align-items: stretch
+      button
+        text-align: left
+        padding: 12px 5px
+  .hero
+    min-height: 620px
+  .hero-content
+    padding-top: 32px
+  .hero-photo
+    width: 100%
+    top: 130px
+    &::after
+      background: linear-gradient(#f3faff 0%, #f3faffb0 20%, #f3faff00 65%)
+  .hero h1
+    font-size: 33px
+    max-width: 360px
+  .hero .hero-subtitle
+    font-size: 15px
+    max-width: 300px
+    line-height: 1.6
+  .hero-copy > p:last-child
+    max-width: 285px
+    font-size: 12px
+    line-height: 1.8
+  .stats
+    flex-direction: column
+    width: 100%
+    max-width: 100%
+    margin-top: 75px
+    padding: 0
+    gap: 8px
+    box-shadow: none
+    background: none
+    border: 0
+    > div
+      padding: 10px 15px
+      border: 1px solid #dbe7f1
+      background: #ffffffed
+      border-radius: 6px
+      gap: 12px
+    strong
+      font-size: 14px
+    small
+      font-size: 11px
+  .round
+    width: 35px
+    height: 35px
+    .icon
+      width: 22px
+      height: 22px
+  .wave-edge
+    height: 35px
+  .section-title
+    font-size: 19px
+  .solutions
+    grid-template-columns: 1fr
+    gap: 12px
+  .solution
+    min-height: 160px
+    padding: 22px
+    h3
+      font-size: 19px
+    .animal
+      width: 43%
+      height: 110px
+  .feed-grid
+    grid-template-columns: 1fr
+    gap: 12px
+  .feed-card
+    padding: 18px
+    gap: 20px
+    min-height: 145px
+    h3
+      font-size: 17px
+    p
+      font-size: 12px
+  .feed-image
+    width: 105px
+    height: 105px
+  .why
+    flex-direction: column
+    align-items: stretch
+    padding: 23px
+    gap: 20px
+  .why-title
+    gap: 17px
+    h3
+      font-size: 17px
+  .reasons
+    grid-template-columns: 1fr
+    gap: 10px
+    p
+      font-size: 12px
+  .home-help
+    padding: 20px
+    flex-wrap: wrap
+    gap: 12px
+    > div
+      flex: 1
+    h3
+      font-size: 15px
+    p
+      font-size: 11px
+    > .button
+      margin-left: 47px
+    .whatsapp-icon
+      width: 35px
+      height: 35px
+      .icon
+        width: 26px
+        height: 26px
+  .footer-grid
+    grid-template-columns: 1fr 1fr
+    gap: 25px
+    > div + div
+      padding-left: 0
+      border: 0
+    p, button
+      font-size: 11px
+  .top-inner
+    justify-content: space-between
+    gap: 10px
+    > span:last-child
+      display: block
+  .topbar .email
+    display: none
+@media (prefers-reduced-motion: reduce)
+  .button
+    transition: none
+  .button:hover
+    transform: none
+.language-switch
+  display: inline-flex
+  align-items: center
+  gap: 6px
+  color: white
+  select
+    background: #ffffff12
+    border: 1px solid #ffffff35
+    color: white
+    border-radius: 4px
+    font: inherit
+    padding: 5px 8px
+    cursor: pointer
+    min-width: 100px
+    option
+      color: #123452
+      background: white
+.solution .realistic-animal
+  object-fit: contain
+  object-position: center
+  mix-blend-mode: normal
+  max-width: 48%
+  height: 155px
+  display: block
+@media (max-width: 760px)
+  .language-switch select
+    padding: 3px 6px
+    min-width: 85px
+  .solution .realistic-animal
+    height: 120px
+// Direct language choices remain visible when the mobile menu is closed.
+.nav > .identity
+  order: 0
+.nav > nav
+  order: 1
+.nav > .language-switch
+  order: 2
+.nav > .menu
+  order: 3
+.language-switch
+  display: inline-flex
+  align-items: center
+  flex-shrink: 0
+  gap: 8px
+  color: #6a7f92
+  white-space: nowrap
+  button
+    background: transparent
+    border: 0
+    border-bottom: 2px solid transparent
+    color: #536a80
+    font-size: 13px
+    font-weight: 500
+    line-height: 1.8
+    padding: 7px 2px
+    &.selected
+      color: #083e7d
+      border-bottom-color: #083e7d
+      font-weight: 700
+    &:hover
+      color: #083e7d
+@media (max-width: 760px)
+  .nav > .menu
+    order: 1
+  .nav > .language-switch
+    order: 2
+    flex-basis: 100%
+    justify-content: flex-end
+    margin-top: 5px
+  .nav > nav
+    order: 3

@@ -1,0 +1,739 @@
+// Shared type sizes and content slots in both languages.
+p, label, input, textarea
+  font-size: 17px
+  line-height: 1.9
+.nav
+  min-height: 94px
+.identity
+  white-space: normal
+  strong
+    font-size: 19px
+    line-height: 1.7
+  small
+    font-size: 12px
+    line-height: 1.8
+    min-height: 22px
+nav button, nav .button, .language-switch button
+  font-size: 15px
+  line-height: 1.8
+.button
+  font-size: 15px
+  min-height: 46px
+  line-height: 1.8
+  white-space: normal
+.section-title
+  font-size: 26px
+  line-height: 1.8
+  min-height: 47px
+  margin-bottom: 30px
+  &::after
+    top: 35px
+.hero
+  min-height: 560px
+.hero-copy
+  display: grid
+  grid-template-rows: 28px 88px 72px minmax(160px, auto)
+  max-width: 700px
+  > .eyebrow
+    font-size: 16px
+    line-height: 1.75
+    margin: 0
+  > h1
+    font-size: 42px
+    line-height: 1.7
+    letter-spacing: 0
+    margin: 0
+  > .hero-subtitle
+    font-size: 21px
+    line-height: 1.7
+    margin: 0
+  > p:last-child
+    max-width: 530px
+    font-size: 17px
+    line-height: 1.9
+    margin: 0
+.stats
+  width: 790px
+  margin-top: 20px
+  min-height: 85px
+  strong
+    font-size: 18px
+    line-height: 1.8
+  small
+    font-size: 14px
+    line-height: 1.8
+.solution
+  min-height: 290px
+  display: grid
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr)
+  gap: 18px
+  padding: 28px
+  isolation: isolate
+  .solution-copy
+    display: grid
+    grid-template-rows: 46px minmax(100px, auto) 48px
+    align-content: center
+  h3
+    font-size: 25px
+    line-height: 1.8
+    margin: 0
+  p
+    font-size: 17px
+    line-height: 1.9
+    margin: 0
+  .button
+    justify-self: start
+    align-self: start
+    font-size: 15px
+    min-height: 46px
+  .realistic-animal
+    width: 100%
+    max-width: 100%
+    height: 190px
+  &::after
+    left: 0
+    right: auto
+    width: 100%
+    height: 140px
+    bottom: -2px
+    background: url('/assets/card-waves.svg') center bottom / 100% 100% no-repeat
+    opacity: .8
+    z-index: 0
+    transform-origin: center bottom
+    animation: none
+.wave-edge
+  left: -5%
+  width: 110%
+  svg path:nth-child(1)
+    animation: shore-water 8s ease-in-out infinite alternate
+  svg path:nth-child(2)
+    animation: shore-water 11s ease-in-out infinite alternate-reverse
+.feed-card
+  min-height: 260px
+  display: grid
+  grid-template-columns: 120px minmax(0, 1fr)
+  gap: 20px
+  padding: 22px
+  > div:last-child
+    display: grid
+    grid-template-rows: 40px 24px minmax(100px, auto) 46px
+    align-content: center
+  h3
+    font-size: 21px
+    line-height: 1.8
+    margin: 0
+  p
+    font-size: 16px
+    line-height: 1.9
+    margin: 0
+  .button
+    font-size: 14px
+    align-self: start
+    justify-self: start
+    min-height: 44px
+.feed-image
+  width: 120px
+  height: 120px
+.why
+  min-height: 240px
+  display: grid
+  grid-template-columns: minmax(260px, .9fr) minmax(0, 2fr)
+.why-title h3
+  font-size: 21px
+  line-height: 1.85
+.reasons
+  grid-auto-rows: minmax(48px, auto)
+  p
+    font-size: 15px
+    line-height: 1.9
+.check-mark
+  width: 19px
+  height: 19px
+  font-size: 12px
+.home-help
+  min-height: 150px
+  > div
+    min-width: 0
+    flex: 1
+  h3
+    font-size: 20px
+    line-height: 1.8
+    min-height: 36px
+  p
+    font-size: 16px
+    line-height: 1.9
+    min-height: 62px
+  > .button
+    flex-shrink: 0
+    width: 260px
+    min-width: 260px
+.footer-grid
+  h3
+    font-size: 19px
+    min-height: 34px
+    line-height: 1.8
+  p, button
+    font-size: 15px
+    line-height: 2
+.copyright
+  font-size: 13px
+@keyframes shore-water
+  from
+    transform: translateX(-12px)
+  to
+    transform: translateX(12px)
+@media (max-width: 1100px)
+  .nav
+    flex-wrap: wrap
+  .menu
+    display: block
+    background: none
+    color: #083e7d
+    .icon
+      width: 26px
+      height: 26px
+  nav
+    display: none
+    width: 100%
+    &.open
+      display: flex
+      flex-direction: column
+      align-items: stretch
+      button
+        text-align: left
+  .feed-card
+    grid-template-columns: 90px minmax(0, 1fr)
+    gap: 14px
+    padding: 18px
+    h3
+      font-size: 19px
+  .feed-image
+    width: 90px
+    height: 90px
+  .why
+    grid-template-columns: 1fr
+    gap: 18px
+  .why-title
+    min-height: 96px
+  .reasons
+    grid-auto-rows: minmax(58px, auto)
+@media (max-width: 760px)
+  .nav > .menu
+    order: 1
+  .nav > nav
+    order: 3
+  .identity strong
+    font-size: 16px
+  .identity small
+    font-size: 10px
+  .hero
+    min-height: 810px
+  .hero-copy
+    grid-template-rows: 28px 120px 88px minmax(185px, auto)
+    > h1
+      font-size: 32px
+      line-height: 1.7
+      max-width: 100%
+    > .hero-subtitle
+      font-size: 18px
+      max-width: 100%
+      line-height: 1.9
+    > p:last-child
+      font-size: 16px
+      line-height: 1.9
+      max-width: 100%
+  .hero .stats
+    margin-top: 25px
+    min-height: 230px
+  .section-title
+    font-size: 22px
+    min-height: 44px
+  .solution
+    min-height: 290px
+    gap: 12px
+    padding: 20px
+    h3
+      font-size: 22px
+    p
+      font-size: 15px
+    .solution-copy
+      grid-template-rows: 44px minmax(130px, auto) 58px
+    .realistic-animal
+      height: 140px
+    .button
+      font-size: 13px
+      padding: 9px 10px
+      min-height: 50px
+    &::after
+      height: 112px
+  .feed-card
+    grid-template-columns: 100px minmax(0, 1fr)
+    > div:last-child
+      grid-template-rows: 40px 24px minmax(110px, auto) 46px
+    h3
+      font-size: 20px
+    p
+      font-size: 16px
+  .feed-image
+    width: 100px
+    height: 100px
+  .why
+    min-height: 0
+  .why-title h3
+    font-size: 19px
+  .reasons
+    grid-auto-rows: minmax(48px, auto)
+  .home-help
+    > .button
+      width: 100%
+      min-width: 0
+      margin-left: 0
+    h3
+      font-size: 18px
+    p
+      font-size: 15px
+  .footer-grid
+    h3
+      font-size: 18px
+    p, button
+      font-size: 14px
+@media (prefers-reduced-motion: reduce)
+  .solution::after, .wave-edge svg path
+    animation: none
+  .solution::after
+    background-image: url('/assets/water-continuous.svg')
+// Continuous static footer water, with room below the three content columns.
+footer
+  padding-bottom: 85px
+  &::after
+    left: 0
+    right: 0
+    bottom: -1px
+    width: 100%
+    height: 90px
+    opacity: .45
+    background: url('/assets/water-continuous.svg') center bottom / 100% 100% no-repeat
+    animation: none
+.footer-grid
+  grid-template-columns: 1.5fr 1fr 1.1fr
+@media (max-width: 760px)
+  .footer-grid
+    grid-template-columns: 1fr
+    gap: 25px
+  footer
+    padding-bottom: 75px
+    &::after
+      height: 65px
+.supplied-products
+  display: grid
+  grid-template-columns: repeat(3, minmax(0, 1fr))
+  gap: 24px
+  margin: 30px 0
+.supplied-card
+  border: 1px solid #dce7ef
+  border-radius: 12px
+  overflow: hidden
+  background: #fbfdff
+  display: flex
+  flex-direction: column
+.supplied-image-button
+  width: 100%
+  height: 360px
+  padding: 20px
+  background: #fff
+  img
+    width: 100%
+    height: 100%
+    object-fit: contain
+.supplied-card-content
+  padding: 24px
+  flex: 1
+  display: flex
+  flex-direction: column
+  h2
+    font-size: 24px
+    line-height: 1.7
+    margin: 0 0 8px
+  > .button
+    align-self: start
+    margin-top: auto
+.feed-facts
+  margin: 12px 0 24px
+  font-size: 16px
+  > div
+    display: flex
+    align-items: baseline
+    justify-content: space-between
+    gap: 20px
+    padding: 10px 0
+    border-bottom: 1px solid #e0eaf2
+  dt
+    color: #536c81
+  dd
+    margin: 0
+    text-align: right
+    font-weight: 600
+    color: #123f68
+.actual-feed-pack
+  display: block
+  width: 100%
+  height: 560px
+  object-fit: contain
+.supplied-detail .product-visual
+  background: white
+  border: 1px solid #e2eaf1
+  padding: 24px
+.supplied-detail h1
+  font-size: clamp(30px, 3vw, 44px)
+  line-height: 1.5
+.supplied-related
+  display: grid
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+  gap: 20px
+  max-width: 760px
+  margin: 24px 0
+.supplied-related-card
+  padding: 20px
+  background: #f6faff
+  border: 1px solid #dce7ef
+  border-radius: 8px
+  color: #083e7d
+  font-size: 17px
+  line-height: 1.8
+  img
+    display: block
+    width: 100%
+    height: 200px
+    object-fit: contain
+    margin-bottom: 18px
+.catalog-back
+  margin-top: 20px
+@media (max-width: 1000px)
+  .supplied-products
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+@media (max-width: 760px)
+  .supplied-products
+    grid-template-columns: 1fr
+  .supplied-image-button
+    height: 330px
+  .actual-feed-pack
+    height: 420px
+  .supplied-related
+    gap: 12px
+  .supplied-related-card
+    padding: 12px
+    font-size: 15px
+    img
+      height: 150px
+.company-card
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 20px
+  width: min(420px, 100%)
+  padding: 32px 24px
+  margin: 30px 0
+  border: 1px solid #dce7ef
+  border-radius: 12px
+  background: #fbfdff
+  color: #153e63
+  transition: border-color .2s, box-shadow .2s
+  &:hover
+    border-color: #729ebc
+    box-shadow: 0 8px 24px #103d6010
+.company-logo
+  display: block
+  width: 100%
+  height: auto
+  aspect-ratio: 1600 / 788
+  object-fit: contain
+  border-radius: 6px
+.catalog-back + .catalog-back
+  margin-left: 12px
+@media (max-width: 760px)
+  .catalog-back + .catalog-back
+    margin-left: 0
+    display: flex
+.catalog-top-actions
+  display: flex
+  align-items: center
+  margin: 0 0 24px
+.whatsapp-button
+  background: #25D366
+  color: #073b22
+  .whatsapp-logo
+    display: block
+    width: 26px
+    height: 26px
+    object-fit: contain
+    flex-shrink: 0
+.whatsapp-icon
+  background: transparent
+  .whatsapp-logo
+    width: 100%
+    height: 100%
+    object-fit: contain
+.button:not(.whatsapp-button)
+  background: #087f8c
+  color: white
+  &:hover
+    background: #066976
+    filter: none
+.company-selection
+  padding: 0 0 8px
+  h1
+    font-size: clamp(28px, 3vw, 40px)
+    line-height: 1.6
+    margin: 0 0 8px
+  > p
+    margin-bottom: 18px
+  .company-card
+    width: min(300px, 100%)
+    margin: 0
+    padding: 20px
+    gap: 16px
+  .company-logo
+    width: 100%
+    height: auto
+    max-height: 120px
+    object-fit: contain
+.catalog-company-logo
+  display: block
+  width: min(38%, 340px)
+  height: auto
+  object-fit: contain
+  border-radius: 6px
+  flex-shrink: 0
+@media (max-width: 760px)
+  .company-selection .company-card
+    padding: 14px
+  .catalog-company-logo
+    width: 32%
+.catalog-hero
+  gap: 24px
+  padding: 24px
+  margin-bottom: 24px
+  > div:first-child
+    min-width: 0
+    h1
+      overflow-wrap: anywhere
+@media (max-width: 760px)
+  .catalog-hero
+    gap: 14px
+    padding: 18px
+
+.feed-context-banner
+  min-height: 200px
+  h1
+    font-size: 32px
+    line-height: 1.6
+    margin: 0 0 10px
+  p
+    margin-bottom: 0
+.feed-context-image
+  display: block
+  width: 240px
+  height: 160px
+  object-fit: contain
+  flex-shrink: 0
+  border-radius: 8px
+.company-selection > h2
+  font-size: 24px
+  margin: 0 0 8px
+@media (max-width: 760px)
+  .feed-context-banner
+    min-height: 170px
+    h1
+      font-size: 25px
+  .feed-context-image
+    width: 115px
+    height: 90px
+.section-title::after
+  content: ''
+  width: 48px
+  height: 3px
+  margin: 8px auto 0
+  border-radius: 3px
+  background: #087f8c
+.heading-accent
+  display: block
+  width: 28px
+  height: 3px
+  margin: 8px 0
+  border-radius: 3px
+  background: #087f8c
+.why-title h3 .heading-accent
+  margin-top: 10px
+.award .why-choose-badge
+  display: block
+  width: 80px
+  height: 90px
+  object-fit: contain
+  flex-shrink: 0
+@media (max-width: 760px)
+  .award .why-choose-badge
+    width: 64px
+    height: 76px
+.feed-context-banner
+  position: relative
+  isolation: isolate
+  overflow: hidden
+  min-height: 230px
+  padding-bottom: 45px
+  > div, > .feed-context-image
+    position: relative
+    z-index: 1
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -2px
+    width: 100%
+    height: 90px
+    background: url('/assets/card-waves.svg') center bottom / 100% 100% no-repeat
+    opacity: .65
+    pointer-events: none
+    z-index: 0
+.feed-context-image
+  width: 280px
+  height: 170px
+  object-fit: contain
+  align-self: center
+@media (max-width: 760px)
+  .feed-context-banner
+    min-height: 200px
+    padding-bottom: 38px
+    &::after
+      height: 65px
+  .feed-context-image
+    width: 120px
+    height: 105px
+@media (prefers-reduced-motion: reduce)
+  .feed-context-banner::after
+    background-image: url('/assets/water-continuous.svg')
+// Use genuine underwater scenes instead of animals floating above decorative waves.
+.feed-context-banner
+  padding-bottom: 24px
+  > .feed-context-image
+    width: 300px
+    height: 190px
+    object-fit: cover
+    border-radius: 12px
+    border: 1px solid #a9d4df
+  &::after
+    height: 45px
+    opacity: .28
+@media (max-width: 760px)
+  .feed-context-banner
+    padding-bottom: 18px
+    > .feed-context-image
+      width: 125px
+      height: 110px
+
+// Pond photography belongs only to the view banner: equal desktop columns.
+.feed-context-banner
+  display: grid
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr)
+  align-items: center
+  gap: 0
+  padding: 0
+  min-height: 177px
+  > div:first-child
+    width: 100%
+    max-width: none
+    min-width: 0
+    padding: 16px
+  > .feed-context-image
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    width: 50%
+    max-width: none
+    height: 100%
+    border: 0
+    border-radius: 0
+    aspect-ratio: auto
+    object-fit: cover
+    object-position: center 58%
+    align-self: center
+@media (max-width: 760px)
+  .feed-context-banner
+    grid-template-columns: 1fr
+    gap: 0
+    padding: 0
+    min-height: 0
+    > div:first-child
+      padding: 14px
+    > .feed-context-image
+      position: static
+      width: 100%
+      height: 125px
+// Mobile hero: normal document flow, readable copy, image and all three stats.
+@media (max-width: 760px)
+  .hero
+    display: flex
+    flex-direction: column
+    min-height: 0
+    padding-bottom: 40px
+    background: #f1f8fd
+  .hero .hero-content
+    display: contents
+  .hero .hero-copy
+    order: 0
+    display: block
+    width: calc(100% - 32px)
+    max-width: none
+    margin: 26px auto 22px
+    padding: 0
+    > .eyebrow
+      margin: 0 0 10px
+      font-size: 14px
+      line-height: 1.7
+    > h1
+      max-width: 100%
+      margin: 0 0 14px
+      font-size: clamp(26px, 7vw, 32px)
+      line-height: 1.4
+      overflow-wrap: anywhere
+    > .hero-subtitle
+      max-width: none
+      margin: 0 0 16px
+      font-size: 17px
+      line-height: 1.7
+    > p:last-child
+      max-width: none
+      margin: 0
+      font-size: 16px
+      line-height: 1.85
+  .hero .hero-photo
+    order: 1
+    position: relative
+    inset: auto
+    width: 100%
+    height: 180px
+    min-height: 180px
+    flex-shrink: 0
+    background-position: center !important
+    &::after
+      display: none
+  .hero .stats
+    order: 2
+    width: calc(100% - 32px)
+    max-width: none
+    min-height: 0
+    margin: 16px auto 0
+    padding: 0
+    gap: 10px
+    > div
+      flex: none
+      min-height: 66px
+      padding: 12px 15px
+      background: white
+    strong
+      font-size: 16px
+      line-height: 1.6
+    small
+      font-size: 13px
+      line-height: 1.6
+      margin-top: 2px
